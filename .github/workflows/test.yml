@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+    - main
+  pull_request: {}
+  workflow_dispatch: {}
+
+jobs:
+  echo:
+    runs-on: oci-cncf-runner
+    steps:
+    - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
